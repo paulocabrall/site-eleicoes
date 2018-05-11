@@ -1,0 +1,64 @@
+
+<div class="container">
+  <div class="">
+    <h2>Novo cliente</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 order-md-1">
+      <!--<h4 class="mb-3">Billing address</h4>-->
+      <form class="needs-validation" novalidate>
+
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="" value="" required
+                   [(ngModel)]="client.name">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="phoneNumber">Telefone </label>
+            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="(00) 00000-0000"
+                   [(ngModel)]="client.phoneNumber">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="address">Endereço</label>
+            <input type="text" class="form-control" id="address" name="address" placeholder="1234 Rua principal" required
+                   [(ngModel)]="client.address">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="complement">Complemento</label>
+            <input type="text" class="form-control" id="complement" name="complement" placeholder="" required
+                   [(ngModel)]="client.addressComplement">
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="zipCode">CEP</label>
+            <input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="" required
+                   [(ngModel)]="client.zipCode">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="exemplo@exemplo.com"
+                   [(ngModel)]="client.email">
+          </div>
+        </div>
+
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit" (click)="saveClient()">Salvar</button>
+
+      </form>
+    </div>
+  </div>
+
+</div>
