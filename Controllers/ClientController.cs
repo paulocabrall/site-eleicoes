@@ -22,6 +22,20 @@ namespace banze.Controllers
             return _ctx.Clients.ToList();
         }
         
+        [HttpGet("{clientId}")]
+        public ActionResult<Client> FindClientById(string clientId)
+        {
+            if (clientId == "new") return new Client();
+
+            var isIdANumber = int.TryParse(clientId, out var id);
+            if (!isIdANumber) return NotFound();
+            
+            var client = _ctx.Clients.FirstOrDefault(x => x.Id == id);
+            if (client == null) return NotFound();
+            
+            return Ok(client);
+        }
+        
         [HttpPost("")]
         public ActionResult<Client> SaveClient([FromBody] Client c)
         {
@@ -50,6 +64,20 @@ namespace banze.Controllers
             return c;
         }
 
+        [HttpDelete("{clientId}")]
+        public ActionResult<Client> RemoveClient(string clientId)
+        {
+            var isIdANumber = int.TryParse(clientId, out var id);
+            if (!isIdANumber) return NotFound();
+            
+            var client = _ctx.Clients.FirstOrDefault(x => x.Id == id);
+            if (client == null) return NotFound();
 
+            _ctx.Clients.Remove(client);
+            _ctx.SaveChanges();
+            
+            return Ok(client);
+        }
+        
     }
 }

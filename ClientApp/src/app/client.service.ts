@@ -9,15 +9,23 @@ export class ClientService {
     public http: HttpClient) {}
 
   findAllClients() {
-    return this.http.get<Client[]>(this.baseUrl + 'api/clients');
+    return this.http.get<Client[]>(`${this.baseUrl}api/clients`);
+  }
+
+  findClientById(clientId: string) {
+    return this.http.get<Client>(`${this.baseUrl}api/clients/${clientId}`)
   }
 
   saveClient(c: Client) {
-    return this.http.post<Client>(this.baseUrl + 'api/clients', c);
+    return this.http.post<Client>(`${this.baseUrl}api/clients`, c);
   }
 
   updateClient(c: Client) {
-    return this.http.put<Client>(this.baseUrl + `api/clients/${c.id}`, c);
+    return this.http.put<Client>(`${this.baseUrl}api/clients/${c.id}`, c);
+  }
+
+  removeClient(c: Client) {
+    return this.http.delete<Client>(`${this.baseUrl}api/clients/${c.id}`);
   }
 
 }

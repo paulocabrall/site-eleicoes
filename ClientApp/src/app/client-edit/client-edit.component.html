@@ -1,7 +1,13 @@
 
 <div class="container">
   <div class="">
-    <h2>Novo cliente</h2>
+    <h1>
+      <button class="btn btn-clear btn-back" type="button" (click)="listClients()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+      <span *ngIf="!client.id">Novo </span>
+      Cliente
+      <span *ngIf="client.id">#{{client.id}}</span>
+      <button class="btn btn-clear" type="button" *ngIf="client.id" (click)="removeClient()"><i class="glyphicon glyphicon-trash"></i></button>
+    </h1>
   </div>
 
   <div class="row">
@@ -54,7 +60,8 @@
           </div>
         </div>
 
-        <hr class="mb-4">
+        <hr>
+        
         <button class="btn btn-primary btn-lg btn-block" type="submit" (click)="saveClient()">Salvar</button>
 
       </form>
