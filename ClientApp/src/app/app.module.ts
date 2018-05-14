@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { ClientEditComponent } from './client-edit/client-edit.component';
 import { ClientListComponent } from './client-list/client-list.component';
 import {ClientService} from "./client.service";
+import {ClientsSearchPipe} from "./client-list/clients-search.pipe";
 
 @NgModule({
   declarations: [
@@ -17,16 +18,20 @@ import {ClientService} from "./client.service";
     NavMenuComponent,
     HomeComponent,
     ClientEditComponent,
-    ClientListComponent
+    ClientListComponent,
+    ClientsSearchPipe,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      // { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'clients', component: ClientListComponent },
       { path: 'clients/:id', component: ClientEditComponent },
+
+      { path: '', redirectTo: 'clients', pathMatch: 'full' },
+      { path: '**', redirectTo: 'clients' },
     ])
   ],
   providers: [ClientService],

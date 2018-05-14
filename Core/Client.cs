@@ -1,10 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace banze.Core
 {
     public class Client
     {
         public int Id { get; set; }
+
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         
         [Required]
         public string Name { get; set; }
@@ -16,4 +20,5 @@ namespace banze.Core
         public string Email { get; set; }
         public string Notes { get; set; }
     }
+    
 }

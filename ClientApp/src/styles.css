@@ -3,6 +3,6 @@
 .btn-back {
   padding: 0;
   margin: 0;
-  font-size: 25px;
+  font-size: 25px !important;
   margin-top: -5px;
 }

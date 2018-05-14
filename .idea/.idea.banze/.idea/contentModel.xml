@@ -36,6 +36,7 @@
             <e p="client-list" t="Include">
               <e p="client-list.component.html" t="Include" />
               <e p="client-list.component.ts" t="Include" />
+              <e p="clients-search.pipe.ts" t="Include" />
             </e>
             <e p="client.service.ts" t="Include" />
             <e p="home" t="Include">
@@ -78,6 +79,8 @@
       <e p="Migrations" t="Include">
         <e p="20180511015600_InitialCreate.cs" t="Include" />
         <e p="20180511015600_InitialCreate.Designer.cs" t="Include" />
+        <e p="20180514020239_CreatedAt.cs" t="Include" />
+        <e p="20180514020239_CreatedAt.Designer.cs" t="Include" />
         <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive">

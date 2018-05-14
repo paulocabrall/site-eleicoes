@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace banze.Controllers
         [HttpGet("")]
         public IEnumerable<Client> FindAllClients()
         {
-            return _ctx.Clients.ToList();
+            return _ctx.Clients.OrderByDescending(x => x.CreatedAt).ToList();
         }
         
         [HttpGet("{clientId}")]
@@ -43,6 +44,10 @@ namespace banze.Controllers
             {
                 return BadRequest(ModelState);
             }
+
+            c.Id = default(int);
+            c.CreatedAt = DateTime.UtcNow;
+            c.UpdatedAt = DateTime.UtcNow;
             
             _ctx.Clients.Add(c);
             _ctx.SaveChanges();
@@ -57,8 +62,20 @@ namespace banze.Controllers
             {
                 return BadRequest(ModelState);
             }
+
+            var existingClient = _ctx.Clients.FirstOrDefault(x => x.Id == clientId);
+            if (existingClient == null) return NotFound();
+
+            existingClient.UpdatedAt = DateTime.UtcNow;
+            existingClient.Name = c.Name;
+            existingClient.Address = c.Address;
+            existingClient.AddressComplement = c.AddressComplement;
+            existingClient.Email = c.Email;
+            existingClient.Notes = c.Notes;
+            existingClient.PhoneNumber = c.PhoneNumber;
+            existingClient.ZipCode = c.ZipCode;
             
-            _ctx.Clients.Update(c);
+            _ctx.Clients.Update(existingClient);
             _ctx.SaveChanges();
 
             return c;
