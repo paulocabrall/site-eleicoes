@@ -54,7 +54,6 @@ namespace banze.Controllers
 
             return c;
         }
-        
         [HttpPut("{clientId}")]
         public ActionResult<Client> UpdateClient([Required] int clientId, [FromBody] Client c)
         {
