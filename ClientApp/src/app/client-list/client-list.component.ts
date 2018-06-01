@@ -22,7 +22,7 @@ export class ClientListComponent implements OnInit {
   }
 
   public editClient(clientId: number) {
-    this.router.navigateByUrl(`/clients/${clientId}`);
+      this.router.navigateByUrl(`/clients/${clientId}`);
   }
 
 }
