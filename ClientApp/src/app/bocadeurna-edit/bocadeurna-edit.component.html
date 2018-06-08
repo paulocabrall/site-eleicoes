@@ -1,0 +1,84 @@
+
+<div>
+  <h2>
+    <button class="btn btn-light btn-back" type="button" (click)="listClients()">
+      <i class="fa fa-arrow-left"></i>
+    </button>
+    Cliente
+    <span *ngIf="client?.id">#{{client.id || '...'}}</span>
+  </h2>
+
+  <div class="row">
+    <div class="col-md-8 order-md-1">
+      <!--<h4 class="mb-3">Billing address</h4>-->
+      <form class="needs-validation" novalidate>
+
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="" value="" required
+                   [(ngModel)]="client.name">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="address">Endereço</label>
+            <input type="text" class="form-control" id="address" name="address" required
+                   [(ngModel)]="client.address">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-5 mb-3">
+            <label for="complement">Complemento</label>
+            <input type="text" class="form-control" id="complement" name="complement" required
+                   [(ngModel)]="client.addressComplement">
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="zipCode">CEP</label>
+            <input type="text" class="form-control" id="zipCode" name="zipCode" required
+                   [(ngModel)]="client.zipCode">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="phoneNumber">Telefone </label>
+            <input type="text" class="form-control" id="phoneNumber" name="phoneNumber"
+                   [(ngModel)]="client.phoneNumber">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" id="email" name="email"
+                   [(ngModel)]="client.email">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <label for="notes">Informações adicionais</label>
+            <textarea type="email" class="form-control" id="notes" name="notes"
+                      [(ngModel)]="client.notes"></textarea>
+          </div>
+        </div>
+
+        <br>
+        <div class="btn-group float-right" role="group">
+          <button class="btn btn-light" type="submit" (click)="saveClient()">
+            <i class="fa fa-save"></i> Salvar
+          </button>
+          <button class="btn btn-light" type="button" (click)="removeClient()">
+            <i class="fa fa-trash"></i>
+          </button>
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+
+</div>

@@ -29,6 +29,24 @@
             <e p="app.component.html" t="Include" />
             <e p="app.component.ts" t="Include" />
             <e p="app.module.ts" t="Include" />
+            <e p="bocadeurna-edit" t="Include">
+              <e p="bocadeurna-edit.component.html" t="Include" />
+              <e p="bocadeurna-edit.component.ts" t="Include" />
+            </e>
+            <e p="bocadeurna-list" t="Include">
+              <e p="bocadeurna-list.component.html" t="Include" />
+              <e p="bocadeurna-list.component.ts" t="Include" />
+              <e p="bocadeurna-search.pipe.ts" t="Include" />
+            </e>
+            <e p="candidato-edit" t="Include">
+              <e p="candidato-edit.component.html" t="Include" />
+              <e p="candidato-edit.component.ts" t="Include" />
+            </e>
+            <e p="candidato-list" t="Include">
+              <e p="candidato-list.component.html" t="Include" />
+              <e p="candidato-list.component.ts" t="Include" />
+              <e p="candidato-search.pipe.ts" t="Include" />
+            </e>
             <e p="client-edit" t="Include">
               <e p="client-edit.component.html" t="Include" />
               <e p="client-edit.component.ts" t="Include" />
@@ -43,10 +61,46 @@
               <e p="home.component.html" t="Include" />
               <e p="home.component.ts" t="Include" />
             </e>
+            <e p="local-edit" t="Include">
+              <e p="local-edit.component.html" t="Include" />
+              <e p="local-edit.component.ts" t="Include" />
+            </e>
+            <e p="local-list" t="Include">
+              <e p="local-list.component.html" t="Include" />
+              <e p="local-list.component.ts" t="Include" />
+              <e p="local-search.pipe.ts" t="Include" />
+            </e>
             <e p="nav-menu" t="Include">
               <e p="nav-menu.component.css" t="Include" />
               <e p="nav-menu.component.html" t="Include" />
               <e p="nav-menu.component.ts" t="Include" />
+            </e>
+            <e p="noticia-edit" t="Include">
+              <e p="noticia-edit.component.html" t="Include" />
+              <e p="noticia-edit.component.ts" t="Include" />
+            </e>
+            <e p="noticia-list" t="Include">
+              <e p="noticia-list.component.html" t="Include" />
+              <e p="noticia-list.component.ts" t="Include" />
+              <e p="noticia-search.pipe.ts" t="Include" />
+            </e>
+            <e p="titulo-edit" t="Include">
+              <e p="titulo-edit.component.html" t="Include" />
+              <e p="titulo-edit.component.ts" t="Include" />
+            </e>
+            <e p="titulo-list" t="Include">
+              <e p="titulo-list.component.html" t="Include" />
+              <e p="titulo-list.component.ts" t="Include" />
+              <e p="titulo-search.pipe.ts" t="Include" />
+            </e>
+            <e p="zona-edit" t="Include">
+              <e p="zona-edit.component.html" t="Include" />
+              <e p="zona-edit.component.ts" t="Include" />
+            </e>
+            <e p="zona-list" t="Include">
+              <e p="zona-list.component.html" t="Include" />
+              <e p="zona-list.component.ts" t="Include" />
+              <e p="zona-search.pipe.ts" t="Include" />
             </e>
           </e>
           <e p="assets" t="Include">

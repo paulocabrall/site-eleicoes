@@ -1,0 +1,40 @@
+
+<div>
+
+
+
+      <h2>
+        Clientes
+        <button class="btn btn-light float-right" type="button" (click)="editClient('new')">Novo cliente</button>
+      </h2>
+
+      <br>
+
+
+      <input type="text" class="form-control" placeholder="Pesquisar... (Nome, ID, Endereço, CEP, Telefone)" [(ngModel)]="searchText">
+
+      <p *ngIf="!clients"><br><em>Carregando...</em></p>
+
+
+      <table class="table table-striped table-hover" *ngIf="clients">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Endereço</th>
+          <th>Data</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let c of clients | clientsSearch:searchText" (click)="editClient(c.id)"
+            style="cursor: pointer;">
+          <td>{{ c.id }}</td>
+          <td>{{ c.name }}</td>
+          <td>{{ c.address }}</td>
+          <td>{{ c.createdAt | date: 'short'}}</td>
+        </tr>
+        </tbody>
+      </table>
+
+
+</div>

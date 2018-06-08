@@ -7,6 +7,13 @@ namespace banze.Core
         private readonly AppSettings _settings;
         
         public DbSet<Client> Clients { get; set; }
+        public DbSet<BocaDeUrna> BocasDeUrna { get; set; }
+        public DbSet<Candidato> Candidatos { get; set; }
+        public DbSet<Local> Locais { get; set; }
+        public DbSet<Noticia> Noticias { get; set; }
+        public DbSet<Titulo> Titulos { get; set; }
+        public DbSet<Zona> Zonas { get; set; }
+
 
         public ApplicationDbContext(AppSettings settings)
         {

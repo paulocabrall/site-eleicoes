@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace banze.Core
 {
-    public class Candidato
+    public class FichaLimpa
     {
         public int Id { get; set; }
 
@@ -11,14 +11,8 @@ namespace banze.Core
         public DateTime UpdatedAt { get; set; }
         
         [Required]
-        public string Name { get; set; }
-        
-        public string Partido { get; set; }
         public string Cargo { get; set; }
-        public string Estado { get; set; }
-        public string Foto { get; set; }
-        public bool FichaLimpa { get; set; }
-
+        
     }
     
 }
