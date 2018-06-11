@@ -4,10 +4,10 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {take} from "rxjs/operators";
 
 @Component({
-  selector: 'app-client-edit',
-  templateUrl: './client-edit.component.html'
+  selector: 'app-bocadeurna-edit',
+  templateUrl: './bocadeurna-edit.component.html'
 })
-export class ClientEditComponent implements OnInit {
+export class BocadeurnaEditComponent implements OnInit {
   public client: Client = {
     id: undefined,
     address: undefined,

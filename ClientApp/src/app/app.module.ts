@@ -11,6 +11,9 @@ import { ClientEditComponent } from './client-edit/client-edit.component';
 import { ClientListComponent } from './client-list/client-list.component';
 import {ClientService} from "./client.service";
 import {ClientsSearchPipe} from "./client-list/clients-search.pipe";
+import {BocadeurnaEditComponent} from "./bocadeurna-edit/bocadeurna-edit.component";
+import {CandidatoEditComponent} from "./candidato-edit/candidato-edit.component";
+
 
 @NgModule({
   declarations: [
@@ -20,6 +23,8 @@ import {ClientsSearchPipe} from "./client-list/clients-search.pipe";
     ClientEditComponent,
     ClientListComponent,
     ClientsSearchPipe,
+    BocadeurnaEditComponent,
+    CandidatoEditComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,6 +34,9 @@ import {ClientsSearchPipe} from "./client-list/clients-search.pipe";
       // { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'clients', component: ClientListComponent },
       { path: 'clients/:id', component: ClientEditComponent },
+      { path: 'boca-de-urna', component: BocadeurnaEditComponent},
+      {path: 'candidato', component: CandidatoEditComponent},
+
 
       { path: '', redirectTo: 'clients', pathMatch: 'full' },
       { path: '**', redirectTo: 'clients' },

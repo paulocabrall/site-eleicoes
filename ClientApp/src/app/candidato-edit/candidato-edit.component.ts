@@ -4,10 +4,10 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {take} from "rxjs/operators";
 
 @Component({
-  selector: 'app-client-edit',
-  templateUrl: './client-edit.component.html'
+  selector: 'app-candidato-edit',
+  templateUrl: './candidato-edit.component.html'
 })
-export class ClientEditComponent implements OnInit {
+export class CandidatoEditComponent implements OnInit {
   public client: Client = {
     id: undefined,
     address: undefined,

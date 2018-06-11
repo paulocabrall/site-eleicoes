@@ -18,6 +18,7 @@ namespace banze.Core
         public string Estado { get; set; }
         public string Foto { get; set; }
         public bool FichaLimpa { get; set; }
+        
 
     }
     
